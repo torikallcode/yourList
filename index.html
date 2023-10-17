@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;700&family=Bungee&family=Julius+Sans+One&family=Kanit:wght@200;300;400;600;700&family=Lobster&family=Montserrat:wght@400;500;600&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>To-do-list</title>
+</head>
+<body class="bg-slate-600">
+    <nav class="bg-[#F9F9F9] border-b-2 w-full fixed h-[70px] px-3 flex items-center">
+        <div class="flex justify-between items-center max-w-md md:max-w-lg lg:max-w-xl mx-auto w-full">
+            <img src="img/20230627_162013.png" alt="logo" class="w-11 cursor-pointer">
+            <h1 class="font-utama text-2xl font-semibold text-gray-800">ToDo list</h1>
+            <img id="addNewList" src="img/add (1).png" alt="" class="w-8 opacity-80 cursor-pointer">
+        </div>
+    </nav>
+    <section id="listBranda" class="w-full min-h-screen p-3 bg-gray-200 pt-24 flex justify-center">
+        <main class="max-w-md md:max-w-lg lg:max-w-xl w-full">
+            <!-- Judul -->
+            <div class="w-full bg-[#F9F9F9] py-3 px-7 rounded-full relative mb-3">
+                <input id="inputJudul" type="text" class="w-full focus:outline-none focus:border-none font-utama text-base bg-[#F9F9F9]" placeholder="Judul">
+                <img src="img/add.png" alt="" class="addJudul w-7 absolute right-3 top-[10px] cursor-pointer">
+            </div>
+            <!-- List -->
+            <div class="w-full bg-[#F9F9F9] py-3 px-7 rounded-full relative mb-7">
+                <input id="inputList" type="text" class="w-full focus:outline-none focus:border-none font-utama text-base bg-[#F9F9F9]" placeholder="Your list">
+                <img id="addList" src="img/add.png" alt="" class="w-7 absolute right-3 top-[10px] cursor-pointer">
+            </div>
+            <!-- Isi Judul dan List -->
+            <div class="w-full bg-[#F9F9F9] py-3 px-7 rounded-lg relative">
+                <!-- judul -->
+                <div id="isiJudulContainer" class="flex justify-between items-center border-b-2 border-gray-400 overflow-hidden relative py-6">
+                    <h1 id="phJudul" class="font-utama text-2xl text-gray-400 font-semibold absolute">Judul</h1>
+                    <h1 id="isiJudul" class="font-utama text-2xl text-gray-800 font-semibold"></h1>
+                </div>
+                <!-- list -->
+                <div id="divList" class="w-full relative flex justify-between items-center">
+                    <ul id="isiListContainer" class="font-utama text-base w-full flex flex-col gap-2 py-5">
+                        <li id="phList" class="w-fullflex justify-between items-start absolute top-4 text-gray-400 ">Your list</li>
+                        <li class="isiList w-fullflex justify-between items-start text-gray-800"></li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+    <!-- <div class="container bg-[#F9F9F9] w-full p-3 rounded-lg  border-2">
+        <div class="flex justify-between items-center border-b-2 border-b-gray-300">
+            <h1 id="h1JudulBranda" class="font-utama text-lg gap-10 text-gray-500 font-medium py-3 relative">Judul : <span id="judulBranda" class="text-gray-900 text-2xl ml-2"></span></h1>
+        </div>
+        <ul id="containerBranda" class="static">
+            <li id="listBranda" class=" py-3 font-utama text-base font-normal flex gap-3 items-center justify-start relative"><span class="absolute right-0 hidden">x</span></li>
+        </ul>
+    </div> -->
+
+    <!-- <section id="modalBox" class="absolute top-0 w-full min-h-screen bg-gray-200 z-50 px-3 pt-5 pb-20 hidden">
+        <h1 id="hapusModal" class="text-2xl font-semibold font-utama text-end mb-4 cursor-pointer">✕</h1>
+        <h1 class="font-utama text-xl font-medium text-center mx-auto mb-7">Ayo buat Todo-list mu</h1> -->
+        <!-- Judul -->
+        <!-- <div class="flex justify-between items-center rounded-full bg-[#F9F9F9] w-full pl-7 pr-3 py-3 mx-auto mb-3 border-2">
+            <input id="inputJudul" type="text" placeholder="Tambahkan Judul" class="w-full bg-transparent outline-0 border-0 font-semibold text-lg hover:ring-0 hover:border-0">
+            <img id="addJudul" src="img/add.png" alt="" class="w-7 cursor-pointer">
+        </div> -->
+        <!-- Teks -->
+        <!-- <div class="flex justify-between items-center rounded-full bg-[#F9F9F9] w-full pl-7 pr-3 py-3 mx-auto mb-7  border-2 ">
+            <input id="inputList" type="text" placeholder="Tambahkan list" class="w-full bg-transparent outline-0 border-0 font-semibold text-lg hover:ring-0 hover:border-0">
+            <img id="addList" src="img/add.png" alt="" class="w-7 cursor-pointer">
+        </div> -->
+        <!-- isi -->
+        <!-- <div id="isiSatu" class="container bg-[#F9F9F9] w-full p-3 rounded-lg  border-2">
+            <div id="isiSatuDua" class="flex justify-between items-center border-b-2 border-b-gray-300">
+                <h1 class="font-utama text-lg gap-10 text-gray-500 font-medium py-3 relative">Judul : <span id="judul" class="text-gray-900 text-2xl ml-2"></span></h1>
+                <img src="img/bin.png" alt="" id="hapusJudul" class="w-6 cursor-pointer">
+            </div>
+            <ul id="listContainer" class="static max-h-80 overflow-y-auto">
+                <li id="firtsList" class=" py-3 font-utama text-base font-normal flex gap-3 items-center justify-start relative line-through"><img src="img/uncheck.png" alt="" class="w-7"> Your list <span class="absolute right-0 hidden">x</span></li>
+            </ul>
+        </div>
+        <button id="tambahBranda" class="bg-gray-800 py-3 px-4 rounded-full absolute left-0 right-0 bottom-4 w-52 text-center mx-auto text-base font-utama font-semibold text-[#F9F9F9]">+ Tambahkan</button>
+    </section> -->
+    <!-- tambahkan list ke layar utama -->
+    <script src="main.js"></script>
+</body>
+</html>
