@@ -37,6 +37,7 @@ let judulSudahAda = false
 
       })
     }
+    // saveData()
     judulSudahAda = true
   })
   // Fungsi untuk memeriksa apakah judul sudah ada
@@ -55,9 +56,9 @@ const isiList = document.querySelector(".isiList")
 const phList = document.querySelector("#phList")
 const divList = document.getElementById("divList")
 const isiListContainer = document.getElementById('isiListContainer')
-let kelasLi = ["flex" , "justify-start" , "items-center" , "relative" , "w-full" , "px-9" , "text-lg"] 
-let kelasUnCheck = ["absolute" , "top-0", "left-0" , "w-7"]
-let kelasRemove= ["absolute" , "top-0", "right-0" , "w-7"]
+let kelasLi = ["flex" , "justify-start" , "items-center" , "relative" , "w-full" , "px-9" , "text-lg" , "cursor-pointer"] 
+let kelasUnCheck = ["absolute" , "top-0", "left-0" , "w-7" , "cursor-pointer"]
+let kelasRemove= ["absolute" , "top-0", "right-0" , "w-7" , "cursor-pointer"]
 //Tambahkan List
   addList.addEventListener("click" , function(){
     if (inputList.value === ""){
@@ -71,8 +72,8 @@ let kelasRemove= ["absolute" , "top-0", "right-0" , "w-7"]
       let remove = document.createElement("img")
       remove.src = "img/remove.png"
       remove.classList.add(...kelasRemove)
-      inputList.innerHTML = ""
       li.innerHTML += inputList.value
+      inputList.value = ""
       li.classList.add(...kelasLi)
       li.appendChild(unCheck)
       li.appendChild(remove)
@@ -87,9 +88,11 @@ let kelasRemove= ["absolute" , "top-0", "right-0" , "w-7"]
           if(Check){
               unCheck.src = "img/unCheck.png";
               Check = false
+              // saveData()
           } else {
               unCheck.src = "img/check.png";
               Check = true
+              // saveData()
           }
       })
       
@@ -97,8 +100,40 @@ let kelasRemove= ["absolute" , "top-0", "right-0" , "w-7"]
         isiListContainer.removeChild(li);
       })
     }
+    // saveData()
   })
 
+// function saveData(){
+//   localStorage.setItem("data", isiListContainer.innerHTML)
+// }
+
+// function showTask(){
+//   isiListContainer.innerHTML = localStorage.getItem("data")
+// }
+// showTask()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 // // li.addEventListener("click", function(){
 // //     li.classList.toggle("line-through")
 // //     if(gambar2){
